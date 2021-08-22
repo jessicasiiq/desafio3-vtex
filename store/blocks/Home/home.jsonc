@@ -1,0 +1,134 @@
+{
+  "store.home": {
+    "blocks": [
+      "slider-layout#home",
+      "search-result-layout.customQuery#home"
+    ]
+  },
+  "search-result-layout.customQuery#home": {
+    "props": {
+      "querySchema": {
+        "skusFilter": "ALL_AVAILABLE",
+        "simulationBehavior": "skip",
+        "maxItemsPerPage": 10
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#lp",
+      "search-result-layout.mobile"
+    ]
+  },
+  "search-result-layout.desktop#lp": {
+    "children": [
+      "search-content#lp"
+    ],
+    "props": {
+      "preventRouteChange": true
+    }
+  },
+  "search-content#lp": {
+    "blocks": [
+      "gallery#lp",
+      "not-found"
+    ]
+  },
+  "gallery#lp": {
+    "props": {
+      "layouts": [
+        {
+          "name": "grid",
+          "component": "GridSummary",
+          "itemsPerRow": {
+            "(min-width: 1300px)": 2,
+            "desktop": 2,
+            "tablet": 1,
+            "phone": 1
+          }
+        },
+        {
+          "name": "list",
+          "component": "ListSummary",
+          "itemsPerRow": 1
+        }
+      ],
+      "ListSummary": "product-summary.shelf",
+      "GridSummary": "product-summary.shelf"
+    }
+  },
+  "product-summary.shelf": {
+    "children": [
+      "product-summary-name",
+      "modal-trigger",
+      "product-images#lp",
+      "vtex.product-highlights@2.x:product-highlights",
+      "vtex.product-highlights@2.x:product-highlights",
+      "product-summary-price",
+      "add-to-cart-button#lp"
+    ],
+    "props": {
+      "blockClass": [
+        "bloco1",
+        "bloco2"
+      ]
+    }
+  },
+  "product-summary-name": {
+    "props": {
+      "showSku": true,
+      "showBrandName": true,
+      "displayMode": "plainText",
+      "textPosition": "right"
+    }
+  },
+  "product-images#lp": {
+    "props": {
+      "showNavigationArrows": true
+    }
+  },
+  "vtex.product-highlights@2.x:product-highlights": {
+    "children": [
+      "product-highlight-text"
+    ]
+  },
+  "product-highlight-text": {
+    "props": {
+      "message": "PRÉ-LANÇAMENTO"
+    }
+  },
+  "add-to-cart-button#lp": {
+    "props": {
+      "onClickBehavior": "go-to-product-page",
+      "text": "Ver detalhes"
+    }
+  },
+  "modal-trigger": {
+    "children": [
+      "image#player",
+      "modal-layout"
+    ]
+  },
+  "image#player": {
+    "props": {
+      "src": "https://i.ibb.co/Km1qq0T/botao-play.png",
+      "maxWidth": "40px",
+      "maxHeight": "40px",
+      "margin": "10px"
+    }
+  },
+  "modal-layout": {
+    "children": [
+      "video#lp"
+    ]
+  },
+  "video#lp": {
+    "props": {
+      "width": "100%",
+      "height": "300px",
+      "loop": false,
+      "autoPlay": true,
+      "muted": false,
+      "src": "https://youtu.be/vVNF4OASRDI",
+      "blockClass": "videoEl"
+    }
+  }
+}

@@ -1,7 +1,34 @@
 {
   "store.product": {
     "children": [
-      
+      "flex-layout.row#main"
     ]
+  },
+  //breadrumb → localização do produto dentro do site
+  "flex-layout.row#main": { //aqui estamos definindo a linha-pai das colunas
+    "props": {
+      "marginTop": 6
+    },
+    "children": [ //aqui estamos definindo a coluna da nossa row
+      "flex-layout.col#product"
+    ]
+  },
+  "flex-layout.col#product": { //definição da coluna product
+    "props": {
+      "preventVerticalStretch": false,
+      "verticalAlign": "middle"
+    },
+    "children": [ //na coluna direita teremos:
+      "product-images",
+      "product-name", //nome do produto
+      "product-price", //preço do produto (que contém sku e quantidade a comprar)
+      "buy-button"
+    ]
+  },
+  "product-price": {
+    "props": {
+      "showSavings": true,
+      "showListPrice": true
+    }
   }
 }

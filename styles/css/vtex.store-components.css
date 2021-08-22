@@ -1,0 +1,36 @@
+ .logoImage{
+     width: 125px;
+     height: 31px;
+     margin-top:5px;
+ }
+ .searchBarContainer :global(.vtex-input-prefix__group) {
+    background-color:transparent;
+    border: none;
+    border-radius: 0;
+    width: 500px;
+    border-bottom: 1px solid #fff;
+    transition:0.9s ease-in-out;
+    text-transform: uppercase;
+    position: absolute;
+}
+.searchBarContainer :global(.vtex-input-prefix__group):hover {
+    border-bottom: 2px solid #fff;
+    transition:0.1s ease-in-out;
+    position: absolute;
+}
+ .searchBarContainer :global(.vtex-input-prefix__group):active{
+    border-bottom: 2px solid #59ff00;
+    color: #59ff00;
+    position: absolute;
+    transition:0.1s ease-in-out;
+    position: absolute;
+}
+.searchIcon{
+    color: #fff
+}
+.container :global(.vtex-button__label){
+    color: #fff;
+}
+.imageElement{
+    border-radius: 25px;
+}

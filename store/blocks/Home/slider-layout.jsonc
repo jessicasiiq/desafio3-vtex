@@ -1,0 +1,38 @@
+{
+    "slider-layout#home": {
+        "children": [
+            "image#slider1",
+            "image#slider2"
+        ],
+        "props": {
+            "autoplay": {
+                "timeout": 7000, //slide passa sozinho a cada 7s
+                "stopOnHover": true //se o mouse estiver em cima, pausa
+            },
+            "showNavigationArrows": "always",
+            "showPaginationDots": "always",
+            "itemsPerPage": 1,
+            "infinite": "false"
+        }
+    },
+    "image#slider1": {
+        "props": {
+            "src": "https://uploaddeimagens.com.br/images/003/390/051/full/banner1.png?1629415705",
+            "maxWidth": "100%",
+            "maxHeight": "100%",
+            "margin": "15px"
+        }
+    },
+    "image#slider2": {
+        "props": {
+            "src": "https://i.ibb.co/Nt5cVTb/W6-S9-NXIJ40-I86-DJI17-S40123-EYNM3-J6-CNF24-M4-Y04-GGC9-TBSXU.png",
+            "maxWidth": "100%",
+            "maxHeight": "100%"
+        }
+    },
+    "product-summary.shelf#1": {
+        "children": [
+            "product-summary-name"
+        ]
+    }
+}

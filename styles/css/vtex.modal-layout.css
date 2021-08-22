@@ -1,0 +1,15 @@
+.triggerContainer{
+    background: #424242;
+    opacity: 1 !important;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 40px;
+    box-shadow: 2px 1px 1px #303030;
+}
+.triggerContainer:hover{
+    background: #d5d5d5;
+    box-shadow: 2px 1px 1px #303030;
+    transition:0.9s ease-in-out;
+}
+
